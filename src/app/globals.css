@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 30% 99%;
+    --foreground: 340 10% 20%;
+    --card: 340 30% 99%;
+    --card-foreground: 340 10% 20%;
+    --popover: 340 30% 99%;
+    --popover-foreground: 340 10% 20%;
+    --primary: 340 80% 80%; /* 马卡龙粉色作为主色调 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 20% 96%;
+    --secondary-foreground: 340 10% 20%;
+    --muted: 340 20% 96%;
+    --muted-foreground: 340 10% 65%;
+    --accent: 340 30% 94%;
+    --accent-foreground: 340 10% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 30% 90%;
+    --input: 340 30% 90%;
+    --ring: 340 80% 80%;
+    --chart-1: 340 80% 80%; /* 马卡龙粉 */
+    --chart-2: 173 58% 75%;
+    --chart-3: 197 37% 70%;
+    --chart-4: 43 74% 80%;
+    --chart-5: 27 87% 80%;
+    --radius: 1rem /* 增加圆角 */
+  }
+  
+  .dark {
+    --background: 340 30% 10%;
+    --foreground: 340 10% 98%;
+    --card: 340 30% 10%;
+    --card-foreground: 340 10% 98%;
+    --popover: 340 30% 10%;
+    --popover-foreground: 340 10% 98%;
+    --primary: 340 70% 70%; /* 深色模式下的马卡龙粉 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 30% 20%;
+    --secondary-foreground: 340 10% 98%;
+    --muted: 340 30% 20%;
+    --muted-foreground: 340 10% 75%;
+    --accent: 340 30% 20%;
+    --accent-foreground: 340 10% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 30% 30%;
+    --input: 340 30% 30%;
+    --ring: 340 70% 70%;
+    --chart-1: 340 70% 70%;
+    --chart-2: 173 58% 60%;
+    --chart-3: 197 37% 60%;
+    --chart-4: 43 74% 65%;
+    --chart-5: 27 87% 65%
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 添加动画类 */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s infinite;
+}
