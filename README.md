@@ -4,7 +4,7 @@
 
 ## 参考结果
 
-![中文示例](docs/demo-zh.png.png)
+![中文示例](docs/demo-zh.png)
 
 ## 开发
 
