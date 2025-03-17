@@ -8,7 +8,7 @@
 
 ## 开发
 
-可选依赖：
+可选依赖（不在package中，需自行添加）：
 
 1. @google/genai 是实验版的库，只是在脚本`script/genaijs.js`试用，可以不装
 2. undici 解决国内node.js fetch 不默认走代理，而且相关库没有处理的问题。如果能用Github WorkSpace这种远程虚机处理会更好
